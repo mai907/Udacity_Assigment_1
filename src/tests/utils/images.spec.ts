@@ -4,11 +4,11 @@ import { resizingImage } from '../../utils/images';
 
 describe('check resize function works', function () {
   const expectedFilename = path.resolve(
-    'src/images/thumb/palmtunnel_thumb.jpg'
+    'images/thumb/palmtunnel_thumb.jpg'
   );
   it('return the original image path if only filename been provided', async function () {
     const result = await resizingImage('palmtunnel');
-    expect(result).toEqual(path.resolve('src/images/full/palmtunnel.jpg'));
+    expect(result).toEqual(path.resolve('images/full/palmtunnel.jpg'));
   });
 
   it('return the resized image path if filename, width and height been provided', async function () {

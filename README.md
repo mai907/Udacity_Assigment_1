@@ -14,7 +14,7 @@ Project to display images and resize them if valid width and height been provide
 
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
-| `filename` | `string` | **Required**. one of the images name in src/images/full folder |
+| `filename` | `string` | **Required**. one of the images name in images/full folder |
 
 #### Get item
 

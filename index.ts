@@ -1,8 +1,5 @@
 import app from './app';
 
-const port = 3000;
-const start = async() => {
-  app.listen(port, () => console.log(`Listening on port ${port}!`));
-};
+const port: number = 3000;
 
-start();
+app.listen(port, ():void => console.log(`Listening on port ${port}!`));

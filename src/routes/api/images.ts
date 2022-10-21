@@ -1,14 +1,11 @@
 import express from 'express';
-
-import { resizingImage } from '../../utils/images';
+import {validImage, validWidthandHeight} from '../middleware/images';
+import { resizingImage} from '../../utils/images';
 
 const imageRouter = express.Router();
+const middelware = [validImage,validWidthandHeight];
 
-imageRouter.get('/', async (req, res) => {
-
-  if (!req.query.filename) {
-    return res.status(400).send('Please provide a filename');
-  }
+imageRouter.get('/',middelware, async (req: express.Request, res: express.Response):Promise<void> => {
 
   const outputFile = await resizingImage(
     req.query.filename as string,
